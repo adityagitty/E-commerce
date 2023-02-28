@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ProductActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+        <ImageView
+            android:id="@+id/full_prdct_image"
+            android:layout_width="match_parent"
+            android:layout_height="426dp"
+            android:layout_weight="0.3"
+            android:scaleType="fitXY"
+            android:src="@drawable/seiko" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/full_prdct_image"
+            android:id="@+id/product_cardview"
+            app:cardCornerRadius="20dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            >
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                >
+                <TextView
+
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="White tshirt"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <RatingBar
+                    android:id="@+id/rating_prdct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_name"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/prdct_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:layout_below="@id/prdct_size"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/prdct_desc"
+                    android:layout_below="@id/prdct_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Seiko Watches in India. Over 130 years of craftsmanship, that make each of these watches incredibly reliable, available now at official online India"
+                    android:lines="4"
+
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@id/rating_prdct"
+                    android:id="@+id/prdct_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/size_item"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_centerVertical="true"
+
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_cardview"
+            >
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price"
+                android:textStyle="bold|italic"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/black"
+                />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:layout_below="@id/total_price"
+
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="starColor">#AA6C39</style>
+
+    <style name="CardView_Style">
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="circular">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+
+    <style name="circular_profile">
+        <item name="cornerSize">25dp</item>
+    </style>
+
+</resources>
