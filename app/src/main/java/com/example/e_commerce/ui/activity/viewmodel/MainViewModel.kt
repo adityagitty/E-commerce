@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: ProductRepository) : ViewModel() {
 
-    val productList get() = repository.productList
+    val productList get() = repository.getProductApiCall("categories")
 
     init {
 

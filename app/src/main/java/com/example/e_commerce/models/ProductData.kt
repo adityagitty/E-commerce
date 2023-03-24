@@ -29,7 +29,6 @@ data class ProductData(
     override fun writeToParcel(dest: Parcel, flags: Int) {
         TODO("Not yet implemented")
     }
-
     companion object CREATOR : Parcelable.Creator<ProductData> {
         override fun createFromParcel(parcel: Parcel): ProductData {
             return ProductData(parcel)
